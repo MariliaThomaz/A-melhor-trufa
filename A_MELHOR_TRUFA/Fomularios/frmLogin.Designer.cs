@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.pnlPai = new System.Windows.Forms.Panel();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.txtSenha = new System.Windows.Forms.TextBox();
-            this.lblUsuario = new System.Windows.Forms.Label();
-            this.lblSenha = new System.Windows.Forms.Label();
-            this.btnAcessar = new System.Windows.Forms.Button();
             this.ckLembrarMe = new System.Windows.Forms.CheckBox();
+            this.btnAcessar = new System.Windows.Forms.Button();
+            this.lblSenha = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.txtSenha = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.pnlPai.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,42 +55,16 @@
             this.pnlPai.Size = new System.Drawing.Size(517, 330);
             this.pnlPai.TabIndex = 0;
             // 
-            // txtUsuario
+            // ckLembrarMe
             // 
-            this.txtUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtUsuario.Location = new System.Drawing.Point(166, 133);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(208, 24);
-            this.txtUsuario.TabIndex = 0;
-            // 
-            // txtSenha
-            // 
-            this.txtSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtSenha.Location = new System.Drawing.Point(166, 196);
-            this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(208, 24);
-            this.txtSenha.TabIndex = 1;
-            this.txtSenha.UseSystemPasswordChar = true;
-            // 
-            // lblUsuario
-            // 
-            this.lblUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(163, 108);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(54, 17);
-            this.lblUsuario.TabIndex = 2;
-            this.lblUsuario.Text = "Usuário";
-            // 
-            // lblSenha
-            // 
-            this.lblSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblSenha.AutoSize = true;
-            this.lblSenha.Location = new System.Drawing.Point(163, 171);
-            this.lblSenha.Name = "lblSenha";
-            this.lblSenha.Size = new System.Drawing.Size(45, 17);
-            this.lblSenha.TabIndex = 3;
-            this.lblSenha.Text = "Senha";
+            this.ckLembrarMe.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ckLembrarMe.AutoSize = true;
+            this.ckLembrarMe.Location = new System.Drawing.Point(166, 243);
+            this.ckLembrarMe.Name = "ckLembrarMe";
+            this.ckLembrarMe.Size = new System.Drawing.Size(100, 21);
+            this.ckLembrarMe.TabIndex = 5;
+            this.ckLembrarMe.Text = "Lembrar-me";
+            this.ckLembrarMe.UseVisualStyleBackColor = true;
             // 
             // btnAcessar
             // 
@@ -103,17 +77,45 @@
             this.btnAcessar.TabIndex = 4;
             this.btnAcessar.Text = "Acessar";
             this.btnAcessar.UseVisualStyleBackColor = true;
+            this.btnAcessar.Click += new System.EventHandler(this.btnAcessar_Click);
             // 
-            // ckLembrarMe
+            // lblSenha
             // 
-            this.ckLembrarMe.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ckLembrarMe.AutoSize = true;
-            this.ckLembrarMe.Location = new System.Drawing.Point(166, 243);
-            this.ckLembrarMe.Name = "ckLembrarMe";
-            this.ckLembrarMe.Size = new System.Drawing.Size(100, 21);
-            this.ckLembrarMe.TabIndex = 5;
-            this.ckLembrarMe.Text = "Lembrar-me";
-            this.ckLembrarMe.UseVisualStyleBackColor = true;
+            this.lblSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblSenha.AutoSize = true;
+            this.lblSenha.Location = new System.Drawing.Point(163, 171);
+            this.lblSenha.Name = "lblSenha";
+            this.lblSenha.Size = new System.Drawing.Size(45, 17);
+            this.lblSenha.TabIndex = 3;
+            this.lblSenha.Text = "Senha";
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Location = new System.Drawing.Point(163, 108);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(54, 17);
+            this.lblUsuario.TabIndex = 2;
+            this.lblUsuario.Text = "Usuário";
+            // 
+            // txtSenha
+            // 
+            this.txtSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtSenha.Location = new System.Drawing.Point(166, 196);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.Size = new System.Drawing.Size(208, 24);
+            this.txtSenha.TabIndex = 1;
+            this.txtSenha.UseSystemPasswordChar = true;
+            this.txtSenha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSenha_KeyPress);
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtUsuario.Location = new System.Drawing.Point(166, 133);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(208, 24);
+            this.txtUsuario.TabIndex = 0;
             // 
             // frmLogin
             // 
@@ -128,6 +130,7 @@
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "A melhor trufa | Login";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.pnlPai.ResumeLayout(false);
             this.pnlPai.PerformLayout();
             this.ResumeLayout(false);

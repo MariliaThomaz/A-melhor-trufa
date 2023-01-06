@@ -100,6 +100,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\A_MELHOR_TRUFA.Domain\A_MELHOR_TRUFA.Domain.csproj">
+      <Project>{FBF7081D-9024-42B6-990A-56D5DEA3E9BF}</Project>
+      <Name>A_MELHOR_TRUFA.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
