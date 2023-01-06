@@ -46,5 +46,11 @@
   <ItemGroup>
     <Folder Include="Repository\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\A_MELHOR_TRUFA.Domain\A_MELHOR_TRUFA.Domain.csproj">
+      <Project>{fbf7081d-9024-42b6-990a-56d5dea3e9bf}</Project>
+      <Name>A_MELHOR_TRUFA.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

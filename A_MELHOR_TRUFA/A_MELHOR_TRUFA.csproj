@@ -101,9 +101,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\A_MELHOR_TRUFA.Data\A_MELHOR_TRUFA.Data.csproj">
+      <Project>{d03574f5-72d9-4b3c-bdc7-9ab9dc57ace5}</Project>
+      <Name>A_MELHOR_TRUFA.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\A_MELHOR_TRUFA.Domain\A_MELHOR_TRUFA.Domain.csproj">
       <Project>{FBF7081D-9024-42B6-990A-56D5DEA3E9BF}</Project>
       <Name>A_MELHOR_TRUFA.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\A_MELHOR_TRUFA.Service\A_MELHOR_TRUFA.Service.csproj">
+      <Project>{a8268e5d-6a7f-444f-a4a1-2e42109224e2}</Project>
+      <Name>A_MELHOR_TRUFA.Service</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
