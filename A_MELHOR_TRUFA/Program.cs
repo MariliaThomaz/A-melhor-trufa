@@ -1,8 +1,5 @@
-﻿using A_MELHOR_TRUFA.Fomularios.Dashboard;
+﻿using A_MELHOR_TRUFA.Fomularios;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace A_MELHOR_TRUFA
@@ -17,7 +14,7 @@ namespace A_MELHOR_TRUFA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmDashboard());
+            Application.Run(new frmLogin());
         }
     }
 }
