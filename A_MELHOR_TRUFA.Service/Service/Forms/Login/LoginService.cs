@@ -8,5 +8,9 @@ namespace A_MELHOR_TRUFA.Service.Service.Forms.Login
 {
     public class LoginService
     {
+        public void Logar()
+        {
+
+        }
     }
 }
